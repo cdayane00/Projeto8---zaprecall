@@ -1,10 +1,12 @@
+import Tela1 from "./Tela1";
+import Main from "./Main";
+import React from 'react';
 
-import Tela1 from './Tela1';
-
-export default function App(){
-    return(
-        <div>
-            <Tela1 />
-        </div>  
+export default function App() {
+    const [init, setInit] = React.useState(false);
+    return (
+        <>
+            { !init ? <Tela1 setInit={setInit}/> : <Main />}
+        </>  
     );
 }
